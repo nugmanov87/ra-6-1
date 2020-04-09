@@ -6,13 +6,13 @@ import WatchModel from "../models/WatchModel";
 const AddForm = ({ handleAdd }) => {
   const [form, setForm] = useState({ city: "", offset: "" });
 
-  const handleChange = evt => {
-    const { name, value } = evt.target;
+  const handleChange = event => {
+    const { name, value } = event.target;
     setForm(prevForm => ({ ...prevForm, [name]: value }));
   };
 
-  const handleSubmit = evt => {
-    evt.preventDefault();
+  const handleSubmit = event => {
+    event.preventDefault();
     const watch = new WatchModel(form.city, form.offset, shortid.generate());
     handleAdd(watch);
     setForm({ city: "", offset: "" });
@@ -48,7 +48,7 @@ const AddForm = ({ handleAdd }) => {
           />
         </div>
       </div>
-      <button className="ui button" type="submit">
+      <button className="ui green button" type="submit">
         Добавить
       </button>
     </form>

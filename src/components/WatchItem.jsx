@@ -10,7 +10,7 @@ const WatchItem = ({ watch, currentUTC, handleDelete }) => {
         </p>
         <p>{currentUTC.utcOffset(Number(watch.offset)).format("kk:mm:ss")}</p>
         <button onClick={() => handleDelete(watch.id)}>
-          <i className="times icon"></i>
+          <i className="times red icon"></i>
         </button>
       </div>
     </div>

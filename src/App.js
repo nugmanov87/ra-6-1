@@ -45,7 +45,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="ui raised very padded text container segment">
+        <div className="ui container segment">
           <AddForm handleAdd={this.handleAdd} />
           <WatchList
             watches={this.state.watches}
